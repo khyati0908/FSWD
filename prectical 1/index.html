@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Real-Time Voting System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Vote for Your Favorite Programming Language</h1>
+    
+    <div class="poll">
+      <button onclick="vote('JavaScript')">JavaScript</button>
+      <button onclick="vote('Python')">Python</button>
+      <button onclick="vote('Java')">Java</button>
+    </div>
+
+    <div class="results">
+      <h2>Live Results</h2>
+      <p>JavaScript: <span id="JavaScript">0</span> votes</p>
+      <p>Python: <span id="Python">0</span> votes</p>
+      <p>Java: <span id="Java">0</span> votes</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
