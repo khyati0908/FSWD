@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kids Calculator</title>
+  <link rel="stylesheet" href="/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="fun-bg">
+
+  <div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="calculator-card p-4 shadow-lg">
+      <h1 class="mb-4 rainbow-text">🧮 Magic Kids Calculator ✨</h1>
+
+      <% if (error) { %>
+        <div class="alert alert-danger rounded-pill"><%= error %></div>
+      <% } %>
+
+      <form action="/calculate" method="POST">
+        <div class="mb-3">
+          <input type="text" class="form-control input-box" name="num1" placeholder="🔢 Enter first number">
+        </div>
+        <div class="mb-3">
+          <input type="text" class="form-control input-box" name="num2" placeholder="🔢 Enter second number">
+        </div>
+
+        <div class="mb-3">
+          <label class="fw-bold mb-2">Choose Operation 🪄</label>
+          <div class="d-flex justify-content-around">
+            <button type="submit" name="operation" value="add" class="calc-btn bg-pink">➕</button>
+            <button type="submit" name="operation" value="subtract" class="calc-btn bg-green">➖</button>
+            <button type="submit" name="operation" value="multiply" class="calc-btn bg-blue">✖</button>
+            <button type="submit" name="operation" value="divide" class="calc-btn bg-orange">➗</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
