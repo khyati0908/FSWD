@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gradient-to-r from-green-400 via-teal-400 to-blue-400 flex items-center justify-center min-h-screen p-4">
+  <div class="bg-white rounded-3xl shadow-2xl p-10 w-full max-w-lg text-center relative overflow-hidden">
+    
+    <i class="fas fa-user-circle text-6xl text-blue-500 mb-4"></i>
+    <h1 class="text-3xl font-extrabold text-gray-800 mb-2">Welcome, <%= username %>!</h1>
+    <p class="text-gray-600 mb-6">You logged in at: <strong><%=loginTime %></strong></p>
+
+    <a href="/logout" class="inline-block bg-gradient-to-r from-red-500 to-pink-600 text-white font-semibold py-3 px-8 rounded-xl shadow-lg hover:scale-105 transform transition duration-300">
+      Logout
+    </a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload Resume</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 flex items-center justify-center min-h-screen p-4">
+  <div class="bg-white rounded-3xl shadow-2xl p-10 w-full max-w-lg text-center relative overflow-hidden">
+    
+    <!-- Decorative circles -->
+    <div class="absolute -top-16 -left-16 w-40 h-40 bg-purple-300 rounded-full mix-blend-multiply animate-pulse opacity-50"></div>
+    <div class="absolute -bottom-20 -right-20 w-60 h-60 bg-pink-300 rounded-full mix-blend-multiply animate-pulse opacity-50"></div>
+    
+    <h1 class="text-3xl font-extrabold text-gray-800 mb-6">Upload Your Resume</h1>
+    
+    <form action="/upload" method="POST" enctype="multipart/form-data" class="flex flex-col items-center">
+      <label class="w-full cursor-pointer bg-gray-100 border-2 border-dashed border-gray-300 rounded-xl py-6 px-4 text-gray-500 hover:bg-gray-200 transition flex flex-col items-center justify-center">
+        <i class="fas fa-file-upload text-4xl mb-3 text-indigo-500"></i>
+        <span class="font-medium">Click to select PDF file</span>
+        <input type="file" name="resume" accept=".pdf" class="hidden">
+      </label>
+
+      <button type="submit" class="mt-6 bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-semibold py-3 px-8 rounded-xl shadow-lg hover:scale-105 transform transition duration-300">
+        Upload Now
+      </button>
+    </form>
+
+    <p class="text-gray-400 mt-4 text-sm">Only PDF files allowed. Max size: 2MB</p>
+  </div>
+</body>
+</html>
